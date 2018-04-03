@@ -11,3 +11,16 @@ Proposed model compresses input sentence more efficient way by considering words
 the previous state-of-art model like RNN encoder-decoder which encodes sentence to fixed-length vector. Hence, proposed
 model shows better performance at experiments with long sentences.
 
+### 2018-04-03
+- Memory Networks
+
+As a class of learning model, Memory networks reason with inference components combined with a long-term memory component.
+The central idea is to combine the successful learning strategies for inference with a memory component that can be
+read and written to. The model is trained to learn how to operate effectively with the memory component.
+
+A memory network consists of a memory m (an array of objects indexed by m_i) and four components I, G, O and R
+
+- I: (input feature map) - converts the input to the feature representation. (e.g. pre-processing)
+- G: (generalization) - updates old memories given the new input. (m_i = G(m_i, I(x), m))
+- O: (output feature map) - produces a new output, given the new input and the current memory state. (o = O(I(x), m))
+- R: (response) - converts the output into the response format desired.
